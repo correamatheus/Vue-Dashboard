@@ -9,6 +9,10 @@ npm install
 ```
 npm run serve
 npm run servidor - Esse comando inicializa o Json Server
+
+Dados para login: 
+    email: matheuscorreati@gmail.com
+    senha: Teste*123
 ```
 
 ### Customize configuration
