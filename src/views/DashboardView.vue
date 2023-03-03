@@ -66,7 +66,7 @@
                   {{ licitacao.orgao }}
                 </td>
                 <td class="licitacoes_table_coltext">
-                  <i class="bi bi-check-circle licitacao_table__icon"></i>
+                  <i class="bi bi-check-circle licitacao_table__icon " :class="{'text-success': licitacao.favorito}" ></i>
                 </td>
                 <td class="licitacoes_table_coltext">
                   <button class="btn btn_vermais" @click="verMais(i)">
@@ -205,6 +205,7 @@ export default {
   border-radius: 8px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background: #ffffff;
+  text-align: center;
 }
 
 .overview_infocards > span {
@@ -321,5 +322,9 @@ td {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+tr, tbody {
+  text-align: center;
 }
 </style>
