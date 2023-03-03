@@ -6,7 +6,7 @@ import { signInWithEmailAndPassword, signOut } from 'firebase/auth'
 
 export default createStore({
   state: {
-    user: null
+    user: null,    
   },
   getters: {
   },
@@ -16,7 +16,7 @@ export default createStore({
     },
     CLEAR_USER(state){
       state.user = null;
-    }
+    }      
   } ,
   actions: {
     async login({commit}, details){
@@ -47,7 +47,7 @@ export default createStore({
       await signOut(auth);
       commit('CLEAR_USER');
       router.push('/login');
-    },
+    }, 
 
     fetchUser({commit}){
       auth.onAuthStateChanged(async user => {
@@ -60,8 +60,6 @@ export default createStore({
           }
         }
       })
-    }
-  },
-  modules: {
-  }
+    },   
+  },  
 })

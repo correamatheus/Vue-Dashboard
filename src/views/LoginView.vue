@@ -44,8 +44,7 @@ export default {
     const store = useStore();  
 
     const login = () => {
-      store.dispatch("login", login_form.value);
-      console.log('teste')
+      store.dispatch("login", login_form.value);      
     }
 
     return {
